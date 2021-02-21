@@ -18,7 +18,8 @@ Python Django based web application with MondoDB for Disaster Assistance Managem
 
 ## Getting Started
 
-### Setting up Pyhton and Virtual Environment 
+### Setting up Python and Virtual Environment 
+> Be sure to have Python 3.7+ installed
 Clone this repository
 ```sh
 git clone https://github.com/asad1996172/Disaster-Management-System
@@ -37,7 +38,7 @@ virtualenv -p python3 env
 ```
 Activate virtual environment 
 ```
-source env/bin.activate (For Mac)
+source env/bin/activate (For Mac)
 env\scripts\activate (For Windows)
 ```
 Check virtual environment 
@@ -53,12 +54,13 @@ pip install -r requirements.txt
 Install mongodb
 ```
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/ (For mac)
+https://www.mongodb.com/try/download/community?tck=docs_server (for windows)
 ```
 Install MongoDB compass for managing MongoDB
 ```
 https://www.mongodb.com/products/compass
 ```
-
+> MongoDB compass will automatically be installed in the windows installation
 ### Running Server
 Make db migrations
 ```
