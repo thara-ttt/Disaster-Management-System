@@ -18,6 +18,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Verify Java Version  # Debugging Step
+        run: java -version
+
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@v1.3
         env:
