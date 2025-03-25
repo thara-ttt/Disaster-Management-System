@@ -3,7 +3,6 @@
 
 name: CI Pipeline
 
-
 on:
   push:
     branches: [main]
@@ -15,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4  # Updated to the latest version
         with:
-          node-version: 12
+          node-version: 18  # Use a more recent Node.js version
       - name: Install node dependencies
         working-directory: ./server
         run: npm install
@@ -31,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2  # Updated to use the latest version of setup-python
+        uses: actions/setup-python@v4  # Updated to use the latest version
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install requirements
